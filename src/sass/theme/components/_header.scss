@@ -4,6 +4,10 @@ h1, h2, h3, h4, h5, p, a, input, span {
 }
 .fish-header {
     background-color: #0039BD82;
+    position: fixed;
+    width: 100%;
+    height: 86px;
+    z-index: 9;
     .header-wrapper-mob {
         display: none;
     }

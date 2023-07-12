@@ -1,0 +1,63 @@
+
+/* Hero section */
+.hero.about-hero {
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    height: auto;
+    .hero-wrapper {
+        padding-bottom: 130px;
+        h1 {
+            color: #fff;
+        }
+        .above-title {
+            color: #FFFFFF;
+            // font-family: "All About Wheels Font", Sans-serif;
+            font-size: 35px;
+            font-weight: 300;
+            letter-spacing: 5px;
+        }
+    }
+}
+    .about-below-sec {
+        background-color: #2B59C3;
+        padding-top: 120px;
+        img {
+            width: 100%;
+        }
+        p {
+            text-align: left;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    .hero-about-shape {
+        position: relative;
+        bottom: -3px;
+        svg {
+            width: calc(122% + 1.3px);
+            height: 96px;
+            .elementor-shape-fill {
+                fill: #fff;
+                transform-origin: center;
+                transform: rotateX(180deg);
+            }
+        }
+    }
+
+
+
+/* Content section */
+.about-content {
+    padding: 70px 0;
+    img {
+        max-width: 400px;
+        margin-left: 70px;
+    }
+    p {
+        color: #2B59C3;
+        font-size: 20px;
+        font-weight: 400;
+    }
+}

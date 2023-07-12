@@ -1,0 +1,52 @@
+/* Hero section */
+
+.hero-blog.hero {
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+}
+
+/* Blogs form */
+.blogs-form {
+    background-color: #2b59c3;
+    padding-top: 50px;
+    .blogs-form-wrap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        p {
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: 400;
+            padding-bottom: 30px;
+        }
+        .search-form {
+            width: 100%;
+            .search-field {
+                width: 85%;
+                border: none;
+                color: #2B59C3;
+                padding-left: 10px;
+                height: 40px;
+            }
+            .search-submit {
+                background-color: #79AEDE;
+                border: none;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* Blogs section */
+
+.blogs {
+    background-color: #2B59C3;
+    padding: 70px 0;
+    .post-wrap {
+        background-color: #fff;
+    }
+}

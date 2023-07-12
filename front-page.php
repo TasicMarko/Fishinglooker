@@ -5,12 +5,13 @@ Template Name: Homepage
 
 get_header();
 
-// $fields = get_fields();
+$fields = get_fields();
 
 ?>  
 
 
 <div class="main">
+
 
 <!-- Hero section -->
 <section class="hero">
@@ -22,7 +23,13 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="hero-wrapper">
-                <h1>FISHING LOOKER</h1>
+                <h1><?php
+                if($fields['hero_title']) {
+                    echo $fields['hero_title'];
+                }else {
+                    the_title(); 
+                }
+                 ?></h1>
                 <div class="hero-categories">
 
                 <!-- Listing all the categories -->
@@ -40,21 +47,18 @@ get_header();
 </section>
 <!-- Hero section END -->
 
+
 <!-- About Us section -->
 <section class="about">
     <div class="container">
         <div class="row">
                 <div class="col-md-6 col-xs-12 about-text-box">
-                    <h2>About Us</h2>
-                    <p>
-                    We may not be able to guarantee you catch a fish, but we can guarantee a whale of a good time on our website!<br>
-
-At Fishing Looker, we’re hooked on fishing and providing the best gear and advice to help you reel in your next big catch.
-                    </p>
-                    <a href="#">Click here</a>
+                    <h2><?php echo $fields['about_title']; ?></h2>
+                    <p><?php echo $fields['about_text']; ?></p>
+                    <a href="<?php echo $fields['about_link']; ?>">Click here</a>
                 </div>
                 <div class="col-md-6 col-xs-12">
-                    <img src="/wp-content/uploads/2023/07/fisherman.gif" alt="fisherman">
+                    <img src="<?php echo $fields['about_image']['url']; ?>" alt="fisherman">
                 </div>
         </div>
     </div>
@@ -72,7 +76,7 @@ At Fishing Looker, we’re hooked on fishing and providing the best gear and adv
 <section class="blog">
     <div class="container">
         <div class="row blog-title-row">
-            <h2>LATEST BLOGS</h2>
+            <h2><?php echo $fields['blog_title']; ?></h2>
         </div>
         <div class="row">    
             <?php
