@@ -26,6 +26,82 @@
 
 	<?php wp_head(); ?>
 </head>
+<header class="fish-header">
+
+	<!-- Mobile menu -->
+	<div class="header-wrapper-mob">
+		<div class="container">
+			<div class="row">
+				<div class="mob-wrap">
+					<div class="logo">
+						<a href="#">
+							<img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
+						</a>
+					</div>
+					<nav class="fish-navigation-mob">
+						<div class="mobile-menu">
+							<ul class="mob-menu">
+							<?php
+								wp_nav_menu( array(
+									'menu'              => 'mob-menu',
+									'theme_location'    => 'Top menu',
+									'depth'             => 2,
+									'container'         => false,
+									'container_class'   => 'collapse navbar-collapse',
+									'container_id'      => false,
+									'menu_class'        => 'nav navbar-nav',
+									'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+									'items_wrap' => '%3$s',
+									'walker'            => new wp_bootstrap_navwalkermobile())
+								);
+								?> 
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Mobile menu END -->
+
+	<!-- Desktop menu -->
+	<div class="header-wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="desk-wrap">
+					<div class="logo">
+						<a href="#">
+							<img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
+						</a>
+					</div>
+					<nav class="fish-navigation">
+						<div class="desktop-menu">
+							<ul class="desk-menu">
+							<?php
+								wp_nav_menu( array(
+									'menu'              => 'main-menu',
+									'theme_location'    => 'Primary menu',
+									'depth'             => 2,
+									'container'         => false,
+									'container_class'   => 'collapse navbar-collapse',
+									'container_id'      => false,
+									'menu_class'        => 'nav navbar-nav',
+									'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+									'items_wrap' => '%3$s',
+									'walker'            => new wp_bootstrap_navwalkermobile())
+								);
+								?>  
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Desktop menu END -->
+
+</header>
+
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>

@@ -14,7 +14,7 @@ $font-main:'Work Sans';
 
 body { 
 	font: {
-		size:$base-size;
+		//size:$base-size;
 		family: $font-main;
 	}
 	-webkit-text-size-adjust: 100%;  //fix for iOS

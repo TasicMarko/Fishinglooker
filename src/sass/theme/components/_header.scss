@@ -1,0 +1,44 @@
+h1, h2, h3, h4, h5, p, a, input, span {
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+}
+.fish-header {
+    background-color: #0039BD82;
+    .header-wrapper-mob {
+        display: none;
+    }
+    .header-wrapper {
+        .desk-wrap {
+            display: flex;
+            width: 100%;
+            padding-bottom: 5px;
+            .fish-navigation {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .desk-menu {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    .menu-item {
+                        margin: 10px;
+                        a {
+                            font-size: 26px;
+                            font-weight: 600;
+                            line-height: 1px;
+                            word-spacing: 6px;
+                            color: #fff;
+                            padding: 10px 0px;
+                            margin: 0 10px;
+                        }
+                    }
+                    .current_page_item a {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}

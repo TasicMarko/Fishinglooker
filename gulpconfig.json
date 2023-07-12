@@ -1,6 +1,6 @@
 {
 	"browserSyncOptions": {
-		"proxy": "http://localhost/",
+		"proxy": "http://fishinglooker.local/",
 		"notify": false,
 		"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
 	},
