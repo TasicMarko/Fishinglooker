@@ -1,0 +1,53 @@
+.error-section {
+    padding: 150px 0 100px;
+    .error-wrap {
+        display: flex;
+        h1 {
+            color: #2B59C3;
+            font-size: 249px;
+            font-weight: bold;
+            padding-right: 30px;
+        }
+        .error-content {
+            p {
+                color: #2B59C3;
+                font-size: 42px;
+                line-height: 1.3em;
+                font-weight: 600;
+                padding-bottom: 20px;
+            }
+            .error-fish {
+                i {
+                    &:before {
+                        content: "\f578";
+                    }
+                }
+            }
+            .search-text {
+                color: #2B59C3;
+                font-size: 15px;
+                font-weight: normal;
+            }
+            .search-form {
+                label {
+                    input {
+                        color: #2B59C3;
+                        background: #f1f2f3;
+                        font-size: 15px;
+                        height: 50px;
+                        padding-left: 13px;
+                        border: none;
+                        width: 430px;
+                    }
+                }
+                input {
+                    min-width: 50px;
+                    background-color: #2b59c3;
+                    height: 50px;
+                    border: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
