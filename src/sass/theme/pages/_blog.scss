@@ -54,3 +54,86 @@
         background-color: #fff;
     }
 }
+
+
+/* Single post */
+
+.hero-single {
+    padding: 150px 0 35px;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+    position: relative;
+    .single-back-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #000;
+        opacity: .5;
+        transition: background .3s,border-radius .3s,opacity .3s;
+    }
+    .hero-single-wrap {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: #fff;
+            font-family: "Varela Round",Sans-serif;
+            font-size: 45px;
+            font-weight: 300;
+            text-transform: capitalize;
+            line-height: 1.2em;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .author-div {
+            display: flex;
+            .autor-date {
+                z-index: 2;
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 10px;
+                &:not(:first-child) {
+                    border-left: 1px solid #fff;
+                }
+            }
+        }
+        .social-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px solid rgba(159,163,173,.2);
+            border-bottom: 1px solid rgba(159,163,173,.2);
+            .share {
+                color: #fff;
+                font-family: "Varela Round",Sans-serif;
+                font-size: 20px;
+                font-weight: 300;
+                text-transform: capitalize;
+                line-height: 1.2em;
+            }
+            .social-img-box {
+                padding-left: 20px;
+                display: flex;
+                span {
+                    background-color: #fff;
+                    width: 45px;
+                    height: 45px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
