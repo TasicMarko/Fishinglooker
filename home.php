@@ -56,34 +56,39 @@ $fields = get_fields();
 <section class="blogs">
     <div class="container">
         <div class="row">
-        <?php
+            
+            <?php
 
-            $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 18]); ?>
+                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 18]); ?>
 
-            <?php if ( $the_query->have_posts() ) : ?>
+                <?php if ( $the_query->have_posts() ) : ?>
 
-                <?php while ( $the_query->have_posts() ) :
-                    $the_query->the_post(); ?>
+                    <?php while ( $the_query->have_posts() ) :
+                        $the_query->the_post(); ?>
 
 
-                    <div class="col-md-4 col-xs-12">
-                        <div class="post-wrap">
-                            <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
-                            <div class="text-wrap">
-                                <h4><?php the_title(); ?></h4>
-                                <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
-                                <a href="<?php the_permalink(); ?>">Read More »</a>
+                        <div class="col-md-4 col-xs-12">
+                            <div class="post-wrap">
+                                <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
+                                <div class="text-wrap">
+                                    <h4><?php the_title(); ?></h4>
+                                    <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
+                                    <a href="<?php the_permalink(); ?>">Read More »</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                <?php wp_reset_postdata(); ?>
+                    <?php wp_reset_postdata(); ?>
 
-            <?php else : ?>
-                <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-            <?php endif; ?>
+                <?php else : ?>
+                    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                <?php endif; ?>
+                <div class="page-navigation">
+                <?php if( function_exists('wp_pagenavi') ) wp_pagenavi(); // WP-PageNavi function ?>
+                </div>
+            
         </div>
     </div>
 </section>
