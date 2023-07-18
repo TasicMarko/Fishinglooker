@@ -34,7 +34,7 @@
 			<div class="row">
 				<div class="mob-wrap">
 					<div class="logo">
-						<a href="#">
+						<a href="/">
 							<img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
 						</a>
 					</div>
@@ -58,6 +58,15 @@
 							</ul>
 						</div>
 					</nav>
+					<div class="burger-menu">
+						<!-- <button class="burger"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></button>
+						<button class="x"><i class="fa fa-times fa-3x" aria-hidden="true"></i></button> -->
+						<div class="bar">
+							<span class="bar-1"> </span>
+							<span class="bar-2"> </span>
+							<span class="bar-3"> </span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

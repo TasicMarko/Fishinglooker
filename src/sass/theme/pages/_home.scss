@@ -3,6 +3,15 @@
     position: relative;
     height: 762px;
     padding-top: 85px;
+    @include bp(laptop-lg) {
+        height: 650px;
+    }
+    @include bp(laptop) {
+        height: 550px;
+    }
+    @include bp(tablet-all) {
+        height: 500px;
+    } 
     .hero-background {
         position: absolute;
         top: 0;
@@ -12,6 +21,13 @@
         z-index: -1;
         video {
             width: 100%;
+            @include bp(tablet-all) {
+                height: 550px;
+                width: 100%;
+            }
+            @include bp(hero-mob) {
+                width: auto;
+            }
         }
     }
     .hero-wrapper {
@@ -21,16 +37,47 @@
         justify-content: center;
         width: 100%;
         padding: 100px 0;
+        @include bp(laptop){
+            padding: 75px 0;
+        }
+        @include bp(tablet-all) {
+            padding: 60px 0;
+        }
         h1 {
             color: #2B59C3;
             font-size: 70px;
             font-weight: 600;
             letter-spacing: 10px;
+            @include bp(tablet-all) {
+                font-size: 50px;
+                text-align: center;
+                line-height: 60px;
+            }
+            @include bp(mobile) {
+                font-size: 40px;
+                line-height: 50px;
+            }
         }
         .hero-categories {
             position: relative;
             bottom: -436px;
             display: flex;
+            @include bp(laptop-lg) {
+                bottom: -300px;
+            }
+            @include bp(laptop) {
+                bottom: -225px;
+                width: 100%;
+            }
+            @include bp(tablet-all) {
+                bottom: -100px;
+                display: inline-flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            @include bp(mobile) {
+                bottom: -45px;
+            }
             a {
                 transition: ease-in-out 0.3s;
                 width: 170px;
@@ -41,6 +88,14 @@
                 color: #FFFFFF;
                 text-transform: uppercase;
                 padding: 10px 20px;
+                text-align: center;
+                @include bp(laptop) {
+                    padding: 10px 12px;
+                }
+                @include bp(tablet-all) {
+                    padding: 15px 12px;
+                    height: 54px;
+                }
                 span {
                     transition: ease-in-out 0.3s;
                     font-size: 24px;
@@ -58,12 +113,21 @@
     padding: 100px 0 0px;
     background-color: #2B59C3;
     margin-bottom: 50px;
+    @include bp(mobile) {
+        padding: 50px 0 0;
+    }
+    img {
+        width: 100%;
+    }
     .about-text-box {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-bottom: 100px;
+        @include bp(mobile-all) {
+            padding-bottom: 0;
+        }
         h2 {
             font-weight: 600;
             color: rgb(255, 255, 255);
@@ -71,12 +135,23 @@
             -webkit-text-stroke-color: rgb(0, 0, 0);
             stroke: rgb(0, 0, 0);
             text-align: center;
+            @include bp(laptop) {
+                font-size: 48px;
+            }
+            @include bp(mobile) {
+                font-size: 40px;
+                font-weight: 500;
+            }
         }
         p {
             font-size: 20px;
             font-weight: 400;
             color: #fff;
             padding: 50px 0;
+            @include bp(tablet-all) {
+                padding: 30px 0;
+                font-size: 18px;
+            }
         }
         a {
             font-size: 16px;
@@ -102,6 +177,9 @@
                 transform-origin: center;
                 transform: rotateX(180deg);
             }
+            @include bp(mobile) {
+                height: 45px;
+            }
         }
     }
 }
@@ -113,12 +191,12 @@
     .blog-title-row {
         justify-content: center;
             h2 {
-        text-align: center;
-        color: #2B59C3;
-        font-size: 40px;
-        font-weight: 600;
-        letter-spacing: 5px;
-        padding-bottom: 50px;
+            text-align: center;
+            color: #2B59C3;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: 5px;
+            padding-bottom: 50px;
     }
     }
     .post-wrap {

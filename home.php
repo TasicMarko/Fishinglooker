@@ -55,7 +55,7 @@ $fields = get_fields();
 <!-- Blogs section -->
 <section class="blogs">
     <div class="container">
-        <div class="row">
+        <div class="row blogs-row">
             
             <?php
 
@@ -67,7 +67,7 @@ $fields = get_fields();
                         $the_query->the_post(); ?>
 
 
-                        <div class="col-md-4 col-xs-12">
+                        <div class="col-md-4 col-xs-12 post-wrapper">
                             <div class="post-wrap">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
                                 <div class="text-wrap">

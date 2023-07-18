@@ -39,7 +39,7 @@ $fields = get_fields();
 	<div class="about-below-sec">
 		<div class="container">
 			<div class="row about-below-row">
-				<div class="col-md-6 col-xs-12">
+				<div class="col-md-6 col-xs-12 about-below-wrap">
 					<img src="<?php echo $fields['hero_below_image']['url']; ?>" alt="fish swimming">
 				</div>
 				<div class="col-md-6 col-xs-12">
@@ -61,10 +61,10 @@ $fields = get_fields();
 <section class="about-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-xs-12">
+			<div class="col-md-6 col-xs-12 about-cont-text-wrap">
 				<p><?php echo $fields['about_text']; ?></p>
 			</div>
-			<div class="col-md-6 col-xs-12">
+			<div class="col-md-6 col-xs-12 about-cont-img-wrap">
 				<img src="<?php echo $fields['about_img']['url']; ?>" alt="fish swiming">
 			</div>
 		</div>

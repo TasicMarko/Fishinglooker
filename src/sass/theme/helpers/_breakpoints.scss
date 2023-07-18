@@ -1,5 +1,80 @@
+// breakpoints
+@mixin bp($value) {
+    @if $value=='xs-down' {
+        @media only screen and (max-width: 575.98px) {
+            @content;
+        }
+    }
+    @else if $value=='sm-down' {
+        @media only screen and (max-width: 767.98px) {
+            @content;
+        }
+    }
+    @else if $value=='md-down' {
+        @media only screen and (max-width: 991.98px) {
+            @content;
+        }
+    }
+    @else if $value=='lg-down' {
+        @media only screen and (max-width: 1199.98px) {
+            @content;
+        }
+    }
+    @else if $value=='md' {
+        @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+            @content;
+        }
+    }
+    @else if $value=='lg' {
+        @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+            @content;
+        }
+    }
+    @else if $value=='small-lap' {
+        @media only screen and (min-width: 1025px) and (max-height: 767px) {
+            @content;
+        }
+    }
+    @else if $value=='desktop' {
+        @media only screen and (min-width: 1200px) and (max-width:1550px) {
+            @content;
+        }
+    }
+    @else if $value=='desktop-lg' {
+        @media only screen and (min-width: 1551px) {
+            @content;
+        }
+    }
+    @else if $value=='xs-up' {
+        @media only screen and (min-width: 576px) {
+            @content;
+        }
+    }
+    @else if $value=='sm-up' {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $value=='md-up' {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $value=='lg-up' {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else {
+        @media only screen and (min-width: 240px) and (max-width: $value) {
+            @content;
+        }
+    }
+}
+
+
 // Custom breakpoints
-@mixin breakpoint($value) {
+@mixin bp($value) {
     @if $value == 'desktop' {
         @media only screen and (min-width : 1200px) and (max-width:1439px)  { @content; }   
     } @else if $value == 'desktop-lg' {
@@ -17,9 +92,16 @@
     } @else if $value == 'tablet' {
         @media only screen and (min-width: 768px) and (max-width: 991.98px)  { @content; }  
 
+    } @else if $value == 'tablet-all' {
+        @media only screen and  (max-width: 991.98px)  { @content; }
+
     } @else if $value == 'laptop' {
         @media only screen and (min-width: 992px) and (max-width: 1199.98px)  { @content; }          
 
+    }@else if $value == 'laptop-lg' {
+        @media only screen and (min-width: 1200px) and (max-width: 1399.98px)  { @content; }          
+    } @else if $value == 'hero-mob' {
+        @media only screen and  (max-width: 820px)  { @content; }
     } @else {
       @media only screen and (min-width : 240px) and (max-width : $value) { @content; }
     }

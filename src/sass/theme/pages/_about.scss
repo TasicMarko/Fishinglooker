@@ -23,14 +23,28 @@
         background-color: #2B59C3;
         padding-top: 120px;
         padding-bottom: 50px;
-        img {
-            width: 100%;
+        @include bp(laptop) {
+            padding-top: 100px;
+        }
+        .about-below-wrap {
+            display: flex;
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
         }
         p {
             text-align: left;
             color: #FFFFFF;
             font-size: 20px;
             font-weight: 400;
+            @include bp(laptop) {
+                font-size: 18px;
+            }
+            @include bp(tablet-all) {
+                font-size: 18px;
+            }
         }
     }
     .hero-about-shape {
@@ -52,13 +66,33 @@
 /* Content section */
 .about-content {
     padding: 70px 0;
-    img {
-        max-width: 400px;
-        margin-left: 70px;
+    @include bp(mobile-all) {
+        padding: 0;
     }
-    p {
-        color: #2B59C3;
-        font-size: 20px;
-        font-weight: 400;
+    .about-cont-img-wrap {
+        @include bp(mobile-all) {
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            max-width: 400px;
+            margin-left: 70px;
+            @include bp(tablet-all) {
+                margin-left: 0;
+            }
+        }
+    }
+    .about-cont-text-wrap {
+        p {
+            color: #2B59C3;
+            font-size: 20px;
+            font-weight: 400;
+            @include bp(laptop) {
+                font-size: 18px;
+            }
+            @include bp(tablet-all) {
+                font-size: 18px;
+            }
+        }
     }
 }
