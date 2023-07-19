@@ -81,7 +81,7 @@
    display: none;
 }
 
-.page-template-contact-template {
+.page-template-contact-template, .single-post, .archive {
     .footer {
         padding-top: 80px;
         .footer-shape  {
@@ -90,12 +90,12 @@
     }
 }
 
-.single-post {
-    .footer {
-        padding-top: 80px;
-        .footer-shape  {
-            display: none;
-         }
-    }
-}
+// .single-post {
+//     .footer {
+//         padding-top: 80px;
+//         .footer-shape  {
+//             display: none;
+//          }
+//     }
+// }
 

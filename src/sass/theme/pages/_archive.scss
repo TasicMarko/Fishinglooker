@@ -1,0 +1,151 @@
+/* Hero section */
+.archive {
+    .hero-blog.hero {
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+        background-size: cover!important;
+        height: 600px;
+        .hero-categories {
+            bottom: -230px;
+            @include bp(tablet-all) {
+                bottom: -150px;
+            }
+            @include bp(mobile) {
+                bottom: -110px;
+            } 
+        }
+        @include bp(laptop) {
+            height: 550px;
+        }
+        @include bp(tablet-all) {
+            height: 500px;
+        } 
+    }
+    
+    /* Blogs form */
+    .blogs-form {
+        background-color: #2b59c3;
+        padding-top: 50px;
+        .blogs-form-wrap {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            p {
+                text-align: center;
+                color: #FFFFFF;
+                font-size: 20px;
+                font-weight: 400;
+                padding-bottom: 30px;
+            }
+            .search-form {
+                width: 100%;
+                .search-field {
+                    width: 85%;
+                    border: none;
+                    color: #2B59C3;
+                    padding-left: 10px;
+                    height: 40px;
+                    @include bp(tablet-all) {
+                        width: 82%;
+                    }
+                    @include bp(mobile) {
+                        width:70%;
+                    }
+                }
+                .search-submit {
+                    background-color: #79AEDE;
+                    border: none;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    /* Blogs section */
+    
+    .blogs {
+        background-color: #2B59C3;
+        padding: 70px 0;
+        .blogs-row {
+            display: inline-flex;
+            width: 100%;
+            .page-navigation {
+                margin: 0 auto;
+                padding-bottom: 50px;
+                .wp-pagenavi {
+                    display: flex;
+                    .pages, .first, .last {
+                        display: none;
+                    }
+                    a, span {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 30px;
+                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        margin: 4px;
+                        border-color: #fff;
+                    }
+                    .current {
+                        background-color: #fff;
+                        color: #2b59c3;
+                    }
+                    a:hover {
+                        color: #95daf3;
+                        border-color: #95daf3;
+                    }
+                }
+            }
+            .post-wrapper {
+                margin-bottom: 30px;
+                    .post-wrap {
+                        background-color: #fff;
+                        height: 100%;
+                        padding-bottom: 0;
+                        margin-bottom: 40px;
+                        border-radius: 10px;
+                        img {
+                            width: 100%;
+                            height: 233px;
+                            -o-object-fit: cover;
+                            object-fit: cover;
+                            border-radius: 10px 10px 0 0;
+                        }
+                        .text-wrap {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            h4 {
+                                color: #2b59c3;
+                                font-weight: 600;
+                                font-size: 18px;
+                                text-align: center;
+                                padding: 20px 0 10px;
+                                line-height: 25px;
+                            }
+                            .autor-date {
+                                text-align: center;
+                                line-height: 1.3em;
+                                font-size: 12px;
+                                margin-bottom: 13px;
+                                color: #adadad;
+                            }
+                            a {
+                                font-size: 20px;
+                                font-weight: 500;
+                                text-transform: uppercase;
+                                color: #2b59c3;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+}
+
