@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
                         border-top: 6px solid white;
                         padding-top:6px;
                         cursor:pointer;
-                        transition:0.4s;
+                        transition:0.3s;
                       }
                        .bar-2 {     
                         width:5em;
@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
                         border-top: 6px solid white;
                         padding-top:5px;  
                         display:fixed;
-                        transition:0.4s;
+                        transition:0.3s;
                         }
                          .bar-3 {  
                       
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
                         width: 40px;
                         border-top: 6px solid white;
                         padding-top:5px;
-                        transition:0.4s;
+                        transition:0.3s;
                         }
                  }
                  .change {
@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
                     .bar-2 {opacity:0;}
                     .bar-3 {
                         -webkit-transform: rotate(45deg) translate(-10px, 5px);
-                        transform: rotate(45deg) translate(-10px, -5px);
+                        transform: rotate(45deg) translate(-10px, -4px);
                     }
                  }
             }
@@ -116,7 +116,8 @@ h1, h2, h3, h4, h5, p, a, input, span {
         .desk-wrap {
             display: flex;
             width: 100%;
-            padding-bottom: 5px;
+            padding-bottom: 0px;
+            padding-top: 10px;
             .logo {
                 img {
                     height: 70px;

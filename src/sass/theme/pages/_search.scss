@@ -1,23 +1,29 @@
 /* Hero section */
-.archive {
+.search {
     .hero-blog.hero {
         background-repeat: no-repeat!important;
         background-position: center!important;
         background-size: cover!important;
         height: 600px;
         h1 {
-            height: 70px;
+            font-size: 55px;
             @include bp(tablet-all) {
-                height: 100px;
+                font-size: 40px;
+                line-height: 55px;
+            }
+            @include bp(mobile-all) {
+                font-size: 35px;
+                line-height: 40px;
+                max-height: 125px;
             }
         }
         .hero-categories {
             bottom: -230px;
             @include bp(tablet-all) {
-                bottom: -125px;
+                bottom: -150px;
             }
             @include bp(mobile) {
-                bottom: -85px;
+                bottom: -65px;
             } 
         }
         @include bp(laptop) {

@@ -80,6 +80,9 @@
     } @else if $value == 'desktop-lg' {
        @media only screen and (min-width : 1440px) { @content; }      
        
+    } @else if $value == 'mobile-xs' {
+        @media only screen and (max-width : 425.98px) { @content; } 
+
     } @else if $value == 'mobile' {
         @media only screen and (max-width : 575.98px) { @content; }    
 

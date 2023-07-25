@@ -58,6 +58,10 @@
                 background-color: #79AEDE;
                 border: none;
                 height: 100%;
+                color: #79aede;
+                position: relative;
+                background-image:url('/wp-content/uploads/2023/07/search-button-17.png');
+                background-repeat: no-repeat;
             }
         }
     }
@@ -415,29 +419,47 @@
                 line-height: 28px;
             }
             .panel {
-                border-radius: 30px;
-                border: 1px solid #fff;
-                padding: 20px;
+                // border-radius: 30px;
+                border: 1px solid #95daf3;
                 margin: 10px 0;
+                background-color: #fff;
                 h4 {
-                    color: #fff;
+                    color: #2b59c3;
                     font-family: Montserrat,Sans-serif;
-                    font-size: 18px;
+                    font-size: 17px;
+                    padding: 20px 20px;
                     line-height: 25px;
+                    position: relative;
+                    &:after {
+                        content: url(/wp-content/uploads/2023/07/blue-arrow-30.png);
+                        position: absolute;
+                        right: 23px;
+                        top: 18px;
+                    }
+                }
+                h4.rotate {
+                    &:after {
+                        transform: rotate(-180deg);
+                    }
                 }
                 .panel__content {
-                    background-color: #fff;
-                    border-radius: 20px;
-                    padding: 10px;
-                    margin-top: 15px;
+                    // background-color: #fff;
+                    // border-radius: 20px;
+                    padding: 28px 25px;
                     display: none;
+                    color: #2b59c3;
+                    border-top: 1px solid #95daf3;
+                    background-color: #fff;
+                    p {
+                        font-size: 16px;
+                    }
                 }
             }
         }
         //// Table ////
         table.single-table {
             margin-bottom: 70px;
-            border: 1px solid #fff;
+            border: 1px solid #95daf3;
             thead {
                 border: 1px solid #fff;
                 border-bottom: none;

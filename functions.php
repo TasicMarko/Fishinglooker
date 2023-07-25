@@ -31,3 +31,11 @@ require_once( __DIR__ . '/inc/hooks.php');                 // Theme Hooks
 require_once( __DIR__ . '/inc/woo.php');                 // Woo
 
 require_once( __DIR__ . '/inc/wp_bootstrap_mobile_navwalker.php'); 
+
+
+//// Change search form button text //// 
+add_filter('get_search_form', 'change_search_submit_text', 10, 2);
+function change_search_submit_text($form, $args) {
+    $form = str_replace('value="Search"', 'value=""', $form);
+    return $form;
+}

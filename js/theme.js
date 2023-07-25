@@ -1634,6 +1634,7 @@ jQuery(document).ready(function () {
     jQuery(this).parent(".panel").find(".panel__content").slideToggle();
     jQuery(this).parent(".panel").prevAll(".panel").find(".panel__content").slideUp();
     jQuery(this).parent(".panel").nextAll(".panel").find(".panel__content").slideUp();
+    // jQuery(this).toggleClass('rotate');
   });
 
   // var SLIDE_TIMEOUT = 500;

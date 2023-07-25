@@ -100,6 +100,10 @@
                 font-weight: 900;
                 text-transform: uppercase;
                 margin: 0 auto;
+                &:hover {
+                 border: 1px solid #fff;
+                 cursor: pointer;   
+                }
             }
             .wpcf7-spinner {
                 display: none;
