@@ -84,6 +84,9 @@
 .page-template-contact-template, .single-post, .archive, .search {
     .footer {
         padding-top: 80px;
+        @include bp(mobile) {
+            padding-top: 40px;
+        }
         .footer-shape  {
             display: none;
          }

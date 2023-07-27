@@ -41,17 +41,25 @@
         }
         .search-form {
             width: 100%;
-            .search-field {
-                width: 85%;
-                border: none;
-                color: #2B59C3;
-                padding-left: 10px;
-                height: 40px;
-                @include bp(tablet-all) {
-                    width: 82%;
-                }
-                @include bp(mobile) {
-                    width:70%;
+            display: flex;
+            justify-content: center;
+            label {
+                width: 100%;
+                .search-field {
+                    width: 100%;
+                    border: none;
+                    color: #2B59C3;
+                    padding-left: 10px;
+                    height: 40px;
+                    // @include bp(tablet-all) {
+                    //     width: 82%;
+                    // }
+                    // @include bp(mobile) {
+                    //     width:70%;
+                    // }
+                    &:focus-visible {
+                        border: none;
+                    }
                 }
             }
             .search-submit {
@@ -60,8 +68,11 @@
                 height: 100%;
                 color: #79aede;
                 position: relative;
-                background-image:url('/wp-content/uploads/2023/07/search-button-17.png');
+                background-image:url('/wp-content/uploads/2023/07/blue-search.png');
                 background-repeat: no-repeat;
+                width: 90px;
+                background-position: center;
+                cursor: pointer;
             }
         }
     }
@@ -355,6 +366,9 @@
             display: flex;
             align-items: center;
             padding-bottom: 50px;
+            @include bp(mobile) {
+                flex-direction: column;
+            }
             .content-block {
                 p {
                     color: #fff;
@@ -376,6 +390,9 @@
                     color: #fff;
                     font-size: 15px;
                     line-height: 23px;
+                }
+                @include bp(mobile) {
+                    margin-top: 30px;
                 }
             }
         }
@@ -420,7 +437,7 @@
             }
             .panel {
                 // border-radius: 30px;
-                border: 1px solid #95daf3;
+                border: 1px solid #2b59c3;
                 margin: 10px 0;
                 background-color: #fff;
                 h4 {
@@ -431,7 +448,7 @@
                     line-height: 25px;
                     position: relative;
                     &:after {
-                        content: url(/wp-content/uploads/2023/07/blue-arrow-30.png);
+                        content: url(/wp-content/uploads/2023/07/dark-blue-arrow.png);
                         position: absolute;
                         right: 23px;
                         top: 18px;
@@ -448,7 +465,7 @@
                     padding: 28px 25px;
                     display: none;
                     color: #2b59c3;
-                    border-top: 1px solid #95daf3;
+                    border-top: 1px solid #2b59c3;
                     background-color: #fff;
                     p {
                         font-size: 16px;
@@ -457,46 +474,48 @@
             }
         }
         //// Table ////
-        table.single-table {
+        .table-wrapper {
+            overflow-x: auto;
             margin-bottom: 70px;
-            border: 1px solid #95daf3;
-            thead {
-                border: 1px solid #fff;
-                border-bottom: none;
-                // display: flex;
-                // justify-content: center;
-                tr {
+            table.single-table {
+                border: 1px solid #95daf3;
+                thead {
                     border: 1px solid #fff;
-                    th {
+                    border-bottom: none;
+                    // display: flex;
+                    // justify-content: center;
+                    tr {
                         border: 1px solid #fff;
-                        text-align: center;
-                        color: #fff;
-                        padding: 7px;
-                        font-size: 17px;
-                        font-weight: 600;
+                        th {
+                            border: 1px solid #fff;
+                            text-align: center;
+                            color: #fff;
+                            padding: 7px;
+                            font-size: 17px;
+                            font-weight: 600;
+                        }
                     }
                 }
-            }
-            tbody {
-                border: 1px solid #fff;
-                border-right: none;
-                border-left: none;
-                tr {
+                tbody {
                     border: 1px solid #fff;
-                    // width: 100%;
-                    border-bottom: none;
-
-                    td {
-                        padding: 5px;
+                    border-right: none;
+                    border-left: none;
+                    tr {
                         border: 1px solid #fff;
-                        font-size: 16px;
-                        color: #fff;
-                        text-align: center;
+                        // width: 100%;
+                        border-bottom: none;
+    
+                        td {
+                            padding: 5px;
+                            border: 1px solid #fff;
+                            font-size: 16px;
+                            color: #fff;
+                            text-align: center;
+                        }
                     }
                 }
             }
         }
-
         //// CTA ////
         .quote-cta--single {
             margin-bottom: 70px;
@@ -505,6 +524,12 @@
             padding: 30px 0;
             display: flex;
             justify-content: space-evenly;
+            @include bp(mobile) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             span {
                 color: #2b59c3;
                 font-size: 40px;
@@ -513,18 +538,26 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include bp(mobile) {
+                    padding-bottom: 20px;
+                }
             }
             a {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
                 color: #2b59c3;
-                background-color: #FFF55C;
+                background-color: #95daf3;
                 padding: 20px;
                 border-radius: 25px;
                 width: 200px;
                 &:hover {
-                    background-color: #DFD541;
+                    background-color: #2b59c3;
+                    color: #fff;
+                }
+                &::after {
+                    content: url(/wp-content/uploads/2023/07/image-2.png);
+                    transform: rotate(270deg);
                 }
             }
         }

@@ -99,7 +99,7 @@
         @media only screen and  (max-width: 991.98px)  { @content; }
 
     } @else if $value == 'laptop' {
-        @media only screen and (min-width: 992px) and (max-width: 1199.98px)  { @content; }          
+        @media only screen and (max-width: 1199.98px)  { @content; }          
 
     }@else if $value == 'laptop-lg' {
         @media only screen and (min-width: 1200px) and (max-width: 1399.98px)  { @content; }          

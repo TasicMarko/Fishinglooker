@@ -19,14 +19,21 @@
         left: 0;
         bottom: 0;
         z-index: -1;
+        overflow: hidden;
         video {
             width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
             @include bp(tablet-all) {
                 height: 550px;
                 width: 100%;
             }
             @include bp(hero-mob) {
                 width: auto;
+            }
+            @include bp(mobile-all) {
+                left: -50%;
             }
         }
     }

@@ -108,13 +108,13 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
 
                                 <div class="row">    
                                     <div class="stat">
-                                        <div class="col-lg-7 col-md-7">
+                                        <div class="col-lg-7 col-md-7 col-xs-12">
                                             <div class="content-block">
                                                 <?php the_sub_field('content_block_left'); ?>
                                             </div>
                                         </div>
                                         <!-- // blokc  -->
-                                        <div class="col-lg-5 col-md-5">
+                                        <div class="col-lg-5 col-md-5 col-xs-12">
                                             <div class="stat-holder">                                                            
                                                 <div class="stat-block">
                                                     <?php the_sub_field('stat_block_right'); ?>
@@ -216,7 +216,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
 
                                     <div class="quote-cta--single">
                                         <span class="title"><?php the_sub_field('cta_title'); ?></span>
-                                        <a href="#bottom-form" class="btn-cta"><?php the_sub_field('button_label'); ?> <i class="fas fa-chevron-circle-right"></i></a>
+                                        <a href="<?php the_sub_field('button_link'); ?>" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
                                     </div>
                                     <!-- // single  -->  
                                     
@@ -304,7 +304,9 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                     </section>
 
                                 <?php elseif( get_row_layout() == 'table' ): ?>
-
+                                 
+                                <!-- Tables -->    
+                                <div class="table-wrapper">
                                 <table style="width:100%" class="single-table">
                                     <thead>
                                         <tr role="row">
@@ -349,6 +351,8 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                         <?php endwhile; // end of the loop. ?>
                                     </tbody>
                                 </table>  
+                                </div>
+                                <!-- Tables END --> 
 
                             <?php endif;
                         endwhile;

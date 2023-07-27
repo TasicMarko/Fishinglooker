@@ -9,24 +9,33 @@ h1, h2, h3, h4, h5, p, a, input, span {
     height: 86px;
     z-index: 9;
     @include bp(laptop) {
-        height: 75px;
+        height: 84px;
     }
     .header-wrapper-mob {
         display: none;
         @include bp(tablet-all) {
             display: block;
+            height: 100%;
         }
         .mob-wrap {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            .logo {
+                display: flex;
+                align-items: center;
+                img {
+                    height: 60px;
+                    width: auto;
+                }
+            }
             .fish-navigation-mob {
                 background-color: #fff;
                 // padding-top: 65px;
                 position: absolute;
                 right: 0;
                 left: 0;
-                top: 86px;
+                top: 85px;
                 display: none;
                 justify-content: center;
                 align-items: center;
@@ -121,6 +130,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
             .logo {
                 img {
                     height: 70px;
+                    width: auto;
                 }
             }
             .fish-navigation {

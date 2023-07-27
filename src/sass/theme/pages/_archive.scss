@@ -47,23 +47,38 @@
             }
             .search-form {
                 width: 100%;
-                .search-field {
-                    width: 85%;
-                    border: none;
-                    color: #2B59C3;
-                    padding-left: 10px;
-                    height: 40px;
-                    @include bp(tablet-all) {
-                        width: 82%;
-                    }
-                    @include bp(mobile) {
-                        width:70%;
+                display: flex;
+                justify-content: center;
+                label {
+                    width: 100%;
+                    .search-field {
+                        width: 100%;
+                        border: none;
+                        color: #2B59C3;
+                        padding-left: 10px;
+                        height: 40px;
+                        // @include bp(tablet-all) {
+                        //     width: 82%;
+                        // }
+                        // @include bp(mobile) {
+                        //     width:70%;
+                        // }
+                        &:focus-visible {
+                            border: none;
+                        }
                     }
                 }
                 .search-submit {
                     background-color: #79AEDE;
                     border: none;
                     height: 100%;
+                    color: #79aede;
+                    position: relative;
+                    background-image:url('/wp-content/uploads/2023/07/blue-search.png');
+                    background-repeat: no-repeat;
+                    width: 90px;
+                    background-position: center;
+                    cursor: pointer;
                 }
             }
         }
