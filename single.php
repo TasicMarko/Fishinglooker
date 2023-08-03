@@ -156,13 +156,15 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                             <?php elseif( get_row_layout() == 'video' ): ?>	
 
                                 <div class="video__holder">
-                                    
+                               
+                                    <video width="320" height="240" controls>
+                                        <source src="<?php echo the_sub_field('internal_video_link') ?>" type="video/mp4"></source>
+                                    </video>
+                                        
                                     <?php if(!empty(the_sub_field('embedded_code_youtube'))){ ?>
-                                        <?php the_sub_field('embedded_code_youtube'); } ?>
-                                        <?php if(!empty(the_sub_field('internal_video_link'))){ ?>
-                                        <iframe width="500" height="320" src="<?php the_sub_field('internal_video_link') ?>"></iframe>
-                                    <?php } ?>    
-                                </div>	
+                                            <?php the_sub_field('embedded_code_youtube'); } ?>                   
+                                    </div>	
+                                
                                 
                             <?php elseif( get_row_layout() == 'accordion' ): ?>		
 
