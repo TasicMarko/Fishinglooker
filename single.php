@@ -152,11 +152,16 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                 </ul>
                             </div>
                             <!-- // toc  -->		
-
+                            
                             <?php elseif( get_row_layout() == 'video' ): ?>	
 
                                 <div class="video__holder">
-                                    <?php the_sub_field('embedded_code'); ?>
+                                    
+                                    <?php if(!empty(the_sub_field('embedded_code_youtube'))){ ?>
+                                        <?php the_sub_field('embedded_code_youtube'); } ?>
+                                        <?php if(!empty(the_sub_field('internal_video_link'))){ ?>
+                                        <iframe width="500" height="320" src="<?php the_sub_field('internal_video_link') ?>"></iframe>
+                                    <?php } ?>    
                                 </div>	
                                 
                             <?php elseif( get_row_layout() == 'accordion' ): ?>		
@@ -220,18 +225,17 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                     </div>
                                     <!-- // single  -->  
                                     
+                                    <?php elseif( get_row_layout() == 'featured_article' ): ?>
                                     <!-- Featured article -->
-                                    <div class="articles-wrapper">
-                                        <div class="row">
-                                        <?php elseif( get_row_layout() == 'featured_article' ): ?>    
-                                        <?php
-                                            $post_objects = get_sub_field('featured_article_list');
+                                    
+                                            
+                                        <?php $post_objects = get_sub_field('featured_article_list');
 
                                             if( $post_objects ): ?>
                                                 <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
                                                     <?php setup_postdata($post); ?>
                                                         
-                                                    <div class="featured-article-box col-md-4 col-xs-12">
+                                                    <div class="featured-article-box">
                                                         <div class="blog-box">
                                                             <div class="blog-photo">
                                                                 <a href="<?php echo get_permalink(); ?>" target="_blank">
@@ -257,7 +261,6 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                                             </div>
                                                             <div class="blog-content">
                                                                 <h3><a href="<?php echo get_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
-                                                                <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
                                                                 <a href="<?php echo get_permalink(); ?>" class="btn-cta" target="_blank">Read More<i class="fas fa-chevron-circle-right"></i></a>
                                                             </div>
                                                         </div>
@@ -269,9 +272,9 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                             <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                                         <?php endif; ?>
                                         <?php wp_reset_postdata(); ?>
-                                        </div>
                                         
-                                    </div>
+                                        
+                                    
 
 
 
@@ -320,7 +323,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                                     <th tabindex="0" rowspan="1" colspan="1"><?php echo $hlabel; ?></th>
                                                 <?php endwhile;
                                             else :
-                                                echo 'No data';
+                                                
                                             endif;
                                             ?>
 
@@ -363,6 +366,81 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
 
 
                 </div>
+
+
+                <!-- Autor info -->
+                <section class="user-info-sec">
+                    <div class="container">
+                        <div class="row">
+                            <div class="error-fish">
+                                <img src="/wp-content/uploads/2023/08/fish-2.png" alt="fish-logo">
+                            </div>
+                            <div class="user-info-wrap">
+                                <?php
+                                $current_user = wp_get_current_user();
+                                $all_meta_for_user = get_user_meta( get_the_author_ID() );
+                                $user_avatar = get_avatar_data(get_the_author_ID()); ?>
+                                
+                                <div class="avatar-wrap"><img src="<?php echo $user_avatar['url'] ?>" alt="authors image"></div>
+                                <div class="avatar-info">
+                                    <h4><?php echo get_author_name(); ?></h4>
+                                    <p><?php echo $all_meta_for_user['description'][0]; ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Autor info END -->
+
+
+
+                <!-- Blogs section -->
+                <section class="blogs">
+                    <div class="container">
+                    <h2 class="more-to-explore">More To Explore</h2>
+                        <div class="row blogs-row">
+                            
+                            
+                            <?php
+
+                                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 6, 'paged' => get_query_var( 'paged' )]); ?>
+
+                                <?php if ( $the_query->have_posts() ) : ?>
+
+                                    <?php while ( $the_query->have_posts() ) :
+                                        $the_query->the_post(); ?>
+
+
+                                        <div class="col-lg-4 col-md-6 col-xs-12 post-wrapper">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <div class="post-wrap">
+                                                <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
+                                                <div class="text-wrap">
+                                                    <h4><?php the_title(); ?></h4>
+                                                    <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
+                                                    <a href="<?php the_permalink(); ?>">Read More »</a>
+                                                </div>
+                                            </div>
+                                            </a>
+                                        </div>
+
+                                    <?php endwhile; ?>
+
+                                    <?php wp_reset_postdata(); ?>
+
+                                <?php else : ?>
+                                    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                                <?php endif; ?>
+                                <div class="page-navigation">
+                                <?php if( function_exists('wp_pagenavi') ) wp_pagenavi(); // WP-PageNavi function ?>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </section>
+                <!-- Blogs section END -->
+
+
             </div>
         </div>
     </div>

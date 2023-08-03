@@ -59,7 +59,7 @@ $fields = get_fields();
             
             <?php
 
-                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 18]); ?>
+                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 18, 'paged' => get_query_var( 'paged' )]); ?>
 
                 <?php if ( $the_query->have_posts() ) : ?>
 

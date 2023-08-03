@@ -71,7 +71,7 @@ get_header();
             
             <?php
 
-                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 9, 'category_name' => $current_page]); ?>
+                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 9, 'category_name' => $current_page, 'paged' => get_query_var( 'paged' )]); ?>
 
                 <?php if ( $the_query->have_posts() ) : ?>
 
