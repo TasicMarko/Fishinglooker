@@ -155,16 +155,30 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                             
                             <?php elseif( get_row_layout() == 'video' ): ?>	
 
+                                <?php
+                                
+                                // $_SESSION['pera_zika'] = get_sub_field('internal_video_link');
+                                // echo get_sub_field('internal_video_link');
+                                // die($_SESSION['pera_zika']);
+                                
+                                // var_dump(empty(the_sub_field('internal_video_link')));
+                                // die('da');
+                                ?>
+
                                 <div class="video__holder">
-                               
-                                    <video width="320" height="240" controls>
-                                        <source src="<?php echo the_sub_field('internal_video_link') ?>" type="video/mp4"></source>
-                                    </video>
+                               <?php // var_dump(the_sub_field("internal_video_link"));die(1); ?>
+                                <!--  Video code -->
+                                <?php if(!empty(get_sub_field('internal_video_link'))) {
+                                
+                                    echo '<video width="320" height="240" controls>
+                                            <source src="'.get_sub_field('internal_video_link').'" type="video/mp4"></source>
+                                        </video>';
+                                    }
                                         
-                                    <?php if(!empty(the_sub_field('embedded_code_youtube'))){ ?>
+                                    if(!empty(the_sub_field('embedded_code_youtube'))){ ?>
                                             <?php the_sub_field('embedded_code_youtube'); } ?>                   
                                     </div>	
-                                
+                                 <!--  Video code END -->
                                 
                             <?php elseif( get_row_layout() == 'accordion' ): ?>		
 
