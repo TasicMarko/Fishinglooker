@@ -145,8 +145,12 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: start;
-                        height: 190px;
+                        justify-content: center;
+                        height: 160px;
+                        
+                        @include bp(tablet-all) {
+                            height: 170px;
+                        }
                         @include bp(mobile-all) {
                             height: unset;
                         }
@@ -158,6 +162,13 @@
                             padding: 20px 5px 10px;
                             line-height: 25px;
                             text-transform: capitalize;
+                        }
+                        .excerpt {
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #2b59c3;
+                            text-align: center;
+                            padding: 0 10px 10px;
                         }
                         .autor-date {
                             text-align: center;
@@ -171,9 +182,6 @@
                             font-weight: 500;
                             text-transform: uppercase;
                             color: #2b59c3;
-                            @include bp(mobile-all) {
-                                margin-bottom: 30px;
-                            }
                         }
                     }
                 }
@@ -908,6 +916,56 @@
                 @include bp(mobile) {
                     padding-left: 0!important;
                     padding-right: 0!important;
+                }
+            }
+        }
+    }
+}
+.category, .archive, .search, .single {
+    .blogs {
+        .blogs-row {
+            .post-wrapper {
+                .post-wrap {
+                    .text-wrap {
+                        height: 140px;
+                        @include bp(tablet-all) {
+                            height: 175px;
+                        }
+                        @include bp(mobile-all) {
+                            height: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.single {
+    .blogs {
+        .blogs-row {
+            .post-wrapper {
+                .post-wrap {
+                    .text-wrap {
+                        height: 180px;
+                        @include bp(laptop) {
+                            height: 200px;
+                        }
+                        @include bp(mobile-all) {
+                            height: unset;
+                        }
+                        h4 {
+                            padding: 10px 5px 10px;
+                            @include bp(mobile-all) {
+                                padding: 20px 5px 10px;
+                            }
+                        }
+                        .read-more {
+                            margin-bottom: 10px;
+                            @include bp(mobile-all) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
                 }
             }
         }

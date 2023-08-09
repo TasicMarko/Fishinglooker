@@ -422,7 +422,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                                 <div class="text-wrap">
                                                     <h4><?php the_title(); ?></h4>
                                                     <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
-                                                    <a href="<?php the_permalink(); ?>">Read More »</a>
+                                                    <a class="read-more" href="<?php the_permalink(); ?>">Read More »</a>
                                                 </div>
                                             </div>
                                             </a>
