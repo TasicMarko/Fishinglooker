@@ -21,7 +21,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
             <div class="hero-single-wrap">
                 <h1><?php the_title(); ?></h1>
                 <div class="author-div">
-                <p class="autor-date"><?php echo get_the_author(); ?></p><p class="autor-date"><?php the_date('F j,Y') ?></p>
+                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><p class="autor-date"><?php echo get_the_author(); ?></p></a><p class="autor-date"><?php the_date('F j,Y') ?></p>
                 </div>
                 <div class="social-div">
                     <p class="share">Share This Post</p>
@@ -387,7 +387,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
                                 
                                 <div class="avatar-wrap"><img src="<?php echo $user_avatar['url'] ?>" alt="authors image"></div>
                                 <div class="avatar-info">
-                                    <h4><?php echo get_author_name(); ?></h4>
+                                    <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><h4><?php echo get_author_name(); ?></h4></a>
                                     <p><?php echo $all_meta_for_user['description'][0]; ?></p>
                                 </div>
                             </div>

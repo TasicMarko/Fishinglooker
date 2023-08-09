@@ -91,7 +91,6 @@
         padding: 70px 0;
         .blogs-row {
             display: inline-flex;
-            width: 100%;
             .page-navigation {
                 margin: 0 auto;
                 padding-bottom: 50px;
@@ -124,6 +123,10 @@
             }
             .post-wrapper {
                 margin-bottom: 30px;
+                @include bp(mobile) {
+                    padding-left: 15px!important;
+                    padding-right: 15px!important;
+                }
                     .post-wrap {
                         background-color: #fff;
                         height: 100%;
