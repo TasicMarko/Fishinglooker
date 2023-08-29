@@ -64,14 +64,18 @@ $fields = get_fields();
                 <?php if ( $the_query->have_posts() ) : ?>
 
                     <?php while ( $the_query->have_posts() ) :
-                        $the_query->the_post(); ?>
+                        $the_query->the_post();
+                        ///// Excerpt
+                       $excerpt = get_the_excerpt();
+                       $excerpt  = implode(' ', array_slice(explode(' ', $excerpt), 0, 18)); ?>
 
 
-                        <div class="col-md-4 col-xs-12 post-wrapper">
+                        <div class="col-lg-4 col-md-6 col-xs-12 post-wrapper">
                             <div class="post-wrap">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
                                 <div class="text-wrap">
-                                    <h4><?php the_title(); ?></h4>
+                                    <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+                                    <!-- <p class="excerpt"><?php // echo $excerpt; ?>...</p> -->
                                     <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
                                     <a href="<?php the_permalink(); ?>">Read More »</a>
                                 </div>

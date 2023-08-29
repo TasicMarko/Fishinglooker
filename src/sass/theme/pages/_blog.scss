@@ -126,10 +126,6 @@
         }
         .post-wrapper {
             margin-bottom: 30px;
-            @include bp(mobile) {
-                padding-left: 0!important;
-                padding-right: 0!important;
-            }
                 .post-wrap {
                     background-color: #fff;
                     height: 100%;
@@ -149,8 +145,12 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: start;
-                        height: 190px;
+                        justify-content: center;
+                        height: 160px;
+                        
+                        @include bp(tablet-all) {
+                            height: 170px;
+                        }
                         @include bp(mobile-all) {
                             height: unset;
                         }
@@ -162,6 +162,13 @@
                             padding: 20px 5px 10px;
                             line-height: 25px;
                             text-transform: capitalize;
+                        }
+                        .excerpt {
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #2b59c3;
+                            text-align: center;
+                            padding: 0 10px 10px;
                         }
                         .autor-date {
                             text-align: center;
@@ -175,9 +182,6 @@
                             font-weight: 500;
                             text-transform: uppercase;
                             color: #2b59c3;
-                            @include bp(mobile-all) {
-                                margin-bottom: 30px;
-                            }
                         }
                     }
                 }
@@ -220,9 +224,29 @@
             line-height: 1.2em;
             text-align: center;
             padding-bottom: 20px;
+            @include bp(mobile) {
+                font-size: 36px;
+            }
         }
         .author-div {
             display: flex;
+            a {
+                .autor-date {
+                    z-index: 2;
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #fff;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    &:not(:first-child) {
+                        border-left: 1px solid #fff;
+                    }
+                }
+                &:hover .autor-date {
+                    color: #95daf3;
+                    transition: ease-in-out 0.3s;
+                }   
+            }
             .autor-date {
                 z-index: 2;
                 font-size: 16px;
@@ -835,11 +859,17 @@
             }
         }
         .avatar-info {
-            h4 {
-                color: #fff;
-                font-size: 24px;
-                font-weight: 600;
-                padding-bottom: 10px;
+            a {
+                h4 {
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                }
+                &:hover h4 {
+                    color: #95daf3;
+                    transition: ease-in-out .3s;
+                }
             }
             p {
                 color: #fff;
@@ -879,5 +909,65 @@
 .single .blog-content-sec {
     @include bp(mobile-all) {
         padding-bottom: 0;
+    }
+    .blogs {
+        .blogs-row {
+            .post-wrapper {
+                @include bp(mobile) {
+                    padding-left: 0!important;
+                    padding-right: 0!important;
+                }
+            }
+        }
+    }
+}
+.category, .archive, .search, .single {
+    .blogs {
+        .blogs-row {
+            .post-wrapper {
+                .post-wrap {
+                    .text-wrap {
+                        height: 140px;
+                        @include bp(tablet-all) {
+                            height: 175px;
+                        }
+                        @include bp(mobile-all) {
+                            height: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.single {
+    .blogs {
+        .blogs-row {
+            .post-wrapper {
+                .post-wrap {
+                    .text-wrap {
+                        height: 180px;
+                        @include bp(laptop) {
+                            height: 200px;
+                        }
+                        @include bp(mobile-all) {
+                            height: unset;
+                        }
+                        h4 {
+                            padding: 10px 5px 10px;
+                            @include bp(mobile-all) {
+                                padding: 20px 5px 10px;
+                            }
+                        }
+                        .read-more {
+                            margin-bottom: 10px;
+                            @include bp(mobile-all) {
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -85,7 +85,7 @@
     .footer {
         padding-top: 80px;
         @include bp(mobile) {
-            padding-top: 40px;
+            padding-top: 20px;
         }
         .footer-shape  {
             display: none;

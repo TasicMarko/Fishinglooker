@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-md-6 col-xs-12 footer-logo-wrap">
                 <div class="footer-logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
                     </a>
                 </div>
@@ -31,7 +31,7 @@
             <div class="col-md-6 col-xs-12 footer-content-wrap">
                 <div class="footer-right-div">
                     <h3>Contact</h3>
-                    <a href="#">hooked@fishinglooker.com</a>
+                    <a href="mailto:hooked@fishinglooker.com">hooked@fishinglooker.com</a>
                 </div>
             </div>
         </div>
