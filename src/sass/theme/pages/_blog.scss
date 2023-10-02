@@ -259,20 +259,21 @@
                     border-left: 1px solid #fff;
                 }
             }
+            .post-cat {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 300;
+                color: #fff;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-left: 1px solid #fff;
+                &:hover {
+                    color: #95daf3;
+                    transition: ease-in-out 0.3s;
+                }
+            }
             .blog-category {
                 color: #fff;
-            }
-            .post-categories {
-                li {
-                    a {
-                        color: #fff;
-                        padding-left: 15px;
-                        &:hover {
-                            color: #95daf3;
-                            transition: ease-in-out 0.3s;
-                        }
-                    }
-                }
             }
         }
         .social-div {
