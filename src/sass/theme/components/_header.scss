@@ -66,6 +66,25 @@ h1, h2, h3, h4, h5, p, a, input, span {
                             }
                         }
                     }
+                    .menu-item-has-children {
+                        position: relative;
+                        .made-chevron {
+                            position: absolute;
+                            right: 15px;
+                            top: 8px;
+                            i {
+                                &::before {
+                                    color: #2b59c3;
+                                }
+                            }
+                        }
+                        .dropdown-some {
+                            margin-top: 12px;
+                            display: none;
+                            transition: ease-in-out 0.1s;
+                            background-color: rgba(0,57,189,.5098039216);
+                        }
+                    }
                 }
             }
             .burger-menu {
@@ -126,7 +145,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
             display: flex;
             width: 100%;
             padding-bottom: 0px;
-            padding-top: 10px;
+            padding-top: 5px;
             .logo {
                 img {
                     height: 70px;
@@ -144,7 +163,10 @@ h1, h2, h3, h4, h5, p, a, input, span {
                     align-items: center;
                     width: 100%;
                     .menu-item {
-                        margin: 10px 23px;
+                        padding: 21px 23px;
+                        @include bp(laptop) {
+                            padding: 25px 23px;
+                        }
                         a {
                             font-size: 26px;
                             font-weight: 600;
@@ -153,9 +175,55 @@ h1, h2, h3, h4, h5, p, a, input, span {
                             color: #fff;
                             padding: 18px 0px;
                             margin: 0 10px;
+                            height: fit-content;
+                            display: block;
                             @include bp(laptop) {
                                 font-size: 22px;
                                 padding: 13px 0;
+                            }
+                        }
+                    }
+                    .menu-item-has-children {
+                        position: relative;
+                        // .made-chevron {
+                        //     position: absolute;
+                        //     right: -18px;
+                        //     top: -5px;
+                        //     i {
+                        //         &::before {
+                        //             color: #fff;
+                        //         }
+                        //     }
+                        // }
+                        &:hover .dropdown-some {
+                            height: auto;
+                            visibility: visible;
+                            transition: ease-in-out 0.2s;
+                        }
+                        .dropdown-some {
+                            padding: 10px 5px;
+                            position: absolute;
+                            height: 0;
+                            visibility: hidden;
+                            transition: ease-in-out 0.2s;
+                            top: 80px;
+                            left: -10px;
+                            background-color: rgba(0,57,189,.5098039216);
+                            width: 235px;
+                            @include bp(laptop) {
+                                top: 78px;
+                            }
+                            .menu-item {
+                                margin: 0;
+                                padding: 10px 5px;
+                                a {
+                                    font-size: 20px;
+                                    padding: 5px 0;
+                                    &:hover {
+                                        color: #95daf3;
+                                        transition: color ease-in-out 0.2s;
+                                    }
+                                }
                             }
                         }
                     }

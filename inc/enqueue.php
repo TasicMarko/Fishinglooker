@@ -23,7 +23,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 
 		wp_enqueue_script( 'jquery' );
 
-		wp_enqueue_script( 'cf-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), true );
+		wp_enqueue_script( 'cf-scripts', get_template_directory_uri() . '/js/theme.min.js', true, array() );
 
 		// Google fonts (Nunito)
 		wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap', false );

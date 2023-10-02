@@ -1655,4 +1655,23 @@ jQuery(document).ready(function () {
     jQuery(".bar").toggleClass('change');
     // jQuery(".fish-navigation-mob li").slideRight();
   });
+
+  ///////// Mob menu dropdown ////////// 
+
+  jQuery(".fish-navigation-mob .menu-item-has-children").append('<span class="made-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>');
+  //  jQuery(".fish-navigation .menu-item-has-children").append('<span class="made-chevron"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>');
+
+  jQuery(".dropdown-some").addClass("hide-nav");
+  jQuery(".made-chevron").on("click", function () {
+    var $this = jQuery(this).prev(".dropdown-some");
+    // jQuery(this).prev(".dropdown-some").slideToggle("linear");
+
+    if ($this.hasClass("hide-nav")) {
+      $this.removeClass("hide-nav");
+      $this.toggle('slow');
+    } else {
+      $this.addClass("hide-nav");
+      $this.slideUp('slow');
+    }
+  });
 });
