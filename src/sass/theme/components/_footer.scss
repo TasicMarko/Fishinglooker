@@ -65,11 +65,20 @@
     .footer-info {
         margin: 0 auto;
         padding: 90px 0 20px;
+        @include bp(mobile) {
+            display: flex;
+            flex-direction: column;
+        }
         span, a {
             text-align: center;
             color: #fff;
             font-size: 22px;
             font-weight: 400;
+        }
+        span {
+            @include bp(mobile) {
+                padding: 5px 0 0 0;
+            }
         }
         a:hover {
             color: #95daf3;

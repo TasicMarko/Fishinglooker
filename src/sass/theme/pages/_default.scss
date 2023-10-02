@@ -1,0 +1,32 @@
+.page-template-default {
+    .about-below-sec {
+        padding-top: 20px;
+    }
+    .about-content {
+        .default-content-wrapper {
+            h2 {
+                font-size: 32px;
+                font-weight: 600;
+                padding-bottom: 30px;
+                padding-top: 20px;
+            }
+            p {
+                padding-bottom: 20px;
+                strong {
+                    font-weight: 700;
+                }
+                
+            }
+            ul {
+                padding-bottom: 20px;
+                padding-left: 20px;
+                list-style-type: circle;
+                li {
+                    font-size: 20px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+    

@@ -21,7 +21,11 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
             <div class="hero-single-wrap">
                 <h1><?php the_title(); ?></h1>
                 <div class="author-div">
-                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><p class="autor-date"><?php echo get_the_author(); ?></p></a><p class="autor-date"><?php the_date('F j,Y') ?></p>
+                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><p class="autor-date"><?php echo get_the_author(); ?></p></a><p class="autor-date"><?php the_date('F j, Y') ?></p>
+                </div>
+                <div class="author-div">
+                    <p class="blog-category">Category : </p>
+                    <p><?php the_category(); ?></p>
                 </div>
                 <div class="social-div">
                     <p class="share">Share This Post</p>

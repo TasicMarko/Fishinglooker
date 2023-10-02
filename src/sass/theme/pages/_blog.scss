@@ -230,6 +230,7 @@
         }
         .author-div {
             display: flex;
+            align-items: center;
             a {
                 .autor-date {
                     z-index: 2;
@@ -256,6 +257,21 @@
                 padding-right: 10px;
                 &:not(:first-child) {
                     border-left: 1px solid #fff;
+                }
+            }
+            .blog-category {
+                color: #fff;
+            }
+            .post-categories {
+                li {
+                    a {
+                        color: #fff;
+                        padding-left: 15px;
+                        &:hover {
+                            color: #95daf3;
+                            transition: ease-in-out 0.3s;
+                        }
+                    }
                 }
             }
         }
