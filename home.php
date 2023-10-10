@@ -75,7 +75,7 @@ $fields = get_fields();
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
                                 <div class="text-wrap">
                                     <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-<!--                                     <p class="excerpt"><?php // echo $excerpt; ?>...</p> -->
+                                    <!-- <p class="excerpt"><?php // echo $excerpt; ?>...</p> -->
                                     <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
                                     <a href="<?php the_permalink(); ?>">Read More »</a>
                                 </div>

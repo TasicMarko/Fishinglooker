@@ -37,7 +37,7 @@
         </div>
         <div class="row">
             <div class="footer-info">
-                <span>Developed by: <a href="https://madeonline.com/">Madeonline</a> | <a href="/privacy-policy/">Privacy Policy</a></span>
+                <span>Developed by: <a href="https://madeonline.com/">Madeonline</a> | </span><span> <a href="/privacy-policy/">Privacy Policy</a></span>
             </div>
         </div>
     </div>

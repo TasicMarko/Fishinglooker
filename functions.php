@@ -45,20 +45,20 @@ function change_search_submit_text($form, $args) {
 
 //////// og tag problem - hook for adding page num in the og:url meta tag /////////////// 
 
-// WPSEO_Frontend::get_instance()->canonical(false, true);
+WPSEO_Frontend::get_instance()->canonical(false, true);
 
-// function gb_wpseo_canonical( $canonical ) {
-//     global $post;
+function gb_wpseo_canonical( $canonical ) {
+    global $post;
 
-//     $paged = get_query_var( 'paged' );
+    $paged = get_query_var( 'paged' );
 
-//     if ( isset( $paged ) && (int) $paged > 0 ) {
-//         return trailingslashit( trailingslashit( $canonical ) . 'page/' . $paged );
+    if ( isset( $paged ) && (int) $paged > 0 ) {
+        return trailingslashit( trailingslashit( $canonical ) . 'page/' . $paged );
 
-//         return $url;
-//     }
+        return $url;
+    }
 
-//     return $canonical;
-// }
+    return $canonical;
+}
 
-// add_filter( 'wpseo_opengraph_url', 'gb_wpseo_canonical' );
+add_filter( 'wpseo_opengraph_url', 'gb_wpseo_canonical' );

@@ -9,6 +9,11 @@
 
 get_header();
 $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
+
+//Grabs the Primary Category of the Post
+global $post;
+$categories = get_the_category($post->ID);
+$cat_link = get_category_link($categories[0]->cat_ID);
 ?>
 
 <div class="main">
@@ -21,7 +26,7 @@ $backgroundImg = get_the_post_thumbnail_url($post->ID, 'full');
             <div class="hero-single-wrap">
                 <h1><?php the_title(); ?></h1>
                 <div class="author-div">
-                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><p class="autor-date"><?php echo get_the_author(); ?></p></a><p class="autor-date"><?php the_date('F j,Y') ?></p>
+                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><p class="autor-date"><?php echo get_the_author(); ?></p></a><p class="autor-date"><?php the_date('F j, Y') ?></p><a href="<?php  echo $cat_link; ?>"><p class="post-cat"><?php  echo $categories[0]->cat_name; ?></p></a>
                 </div>
                 <div class="social-div">
                     <p class="share">Share This Post</p>
