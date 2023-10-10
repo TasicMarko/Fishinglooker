@@ -9,12 +9,13 @@ h1, h2, h3, h4, h5, p, a, input, span {
     height: 86px;
     z-index: 9;
     @include bp(laptop) {
-        height: 75px;
+        height: 84px;
     }
     .header-wrapper-mob {
         display: none;
         @include bp(tablet-all) {
             display: block;
+            height: 100%;
         }
         .mob-wrap {
             display: flex;
@@ -26,7 +27,7 @@ h1, h2, h3, h4, h5, p, a, input, span {
                 position: absolute;
                 right: 0;
                 left: 0;
-                top: 86px;
+                top: 85px;
                 display: none;
                 justify-content: center;
                 align-items: center;

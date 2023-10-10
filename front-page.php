@@ -52,12 +52,12 @@ $fields = get_fields();
 <section class="about">
     <div class="container">
         <div class="row">
-                <div class="col-md-6 col-xs-12 about-text-box">
+                <div class="col-md-9 col-xs-12 about-text-box">
                     <h2><?php echo $fields['about_title']; ?></h2>
                     <p><?php echo $fields['about_text']; ?></p>
                     <a href="<?php echo $fields['about_link']; ?>">Click here</a>
                 </div>
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-6 col-xs-12 about-right">
                     <img src="<?php echo $fields['about_image']['url']; ?>" alt="fisherman">
                 </div>
         </div>
@@ -95,7 +95,7 @@ $fields = get_fields();
                                 <div class="text-wrap">
                                     <h4><?php the_title(); ?></h4>
                                     <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
-                                    <a href="">Read More »</a>
+                                    <a href="<?php the_permalink(); ?>">Read More »</a>
                                 </div>
                             </div>
                         </div>
