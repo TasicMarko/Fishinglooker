@@ -21,23 +21,27 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-xs-12 footer-logo-wrap">
+            <div class="col-md-3 col-xs-12 footer-logo-wrap">
                 <div class="footer-logo">
                     <a href="/">
                         <img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
                     </a>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12 footer-content-wrap">
+            <div class="col-md-9 col-xs-12 footer-content-wrap">
                 <div class="footer-right-div">
-                    <h3>Contact</h3>
+                    <div class="footer-content">
+                        <h2><?php the_field('footer_title', 'options'); ?></h2>
+                   <?php the_field('footer_content', 'options'); ?>
+                    </div>
+                    <h2>Contact</h2>
                     <a href="mailto:hooked@fishinglooker.com">hooked@fishinglooker.com</a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="footer-info">
-                <span>Developed by: <a href="https://madeonline.com/">Madeonline</a> | </span><span> <a href="/privacy-policy/">Privacy Policy</a></span>
+                <span>Developed by: <a href="https://madeonline.com/">Made Online</a> | </span><span> <a href="/privacy-policy/">Privacy Policy</a></span>
             </div>
         </div>
     </div>

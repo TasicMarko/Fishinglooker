@@ -190,9 +190,12 @@
             top: -7%;
             left: 59%;
             z-index: 1;
-            @include bp(mobile-all) {
+            @include bp(tablet-all) {
                 top: 1%;
                 left: 59%; 
+            }
+            @include bp(mobile-all) {
+                position: unset;
             }
         }
     }

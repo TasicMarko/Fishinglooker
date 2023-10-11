@@ -6,7 +6,7 @@ Template Name: Homepage
 get_header();
 
 $fields = get_fields();
-
+$option_field = get_fields('options');
 ?>  
 
 
