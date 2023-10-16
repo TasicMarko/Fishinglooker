@@ -6,7 +6,7 @@ Template Name: Homepage
 get_header();
 
 $fields = get_fields();
-
+$option_field = get_fields('options');
 ?>  
 
 
@@ -52,14 +52,25 @@ $fields = get_fields();
 <section class="about">
     <div class="container">
         <div class="row">
-                <div class="col-md-6 col-xs-12 about-text-box">
+                <div class="col-md-9 col-xs-12 about-text-box">
                     <h2><?php echo $fields['about_title']; ?></h2>
                     <p><?php echo $fields['about_text']; ?></p>
                     <a href="<?php echo $fields['about_link']; ?>">Click here</a>
                 </div>
-                <div class="col-md-6 col-xs-12">
+                <div class="col-md-6 col-xs-12 about-right">
                     <img src="<?php echo $fields['about_image']['url']; ?>" alt="fisherman">
                 </div>
+        </div>
+        <div class="error-fish">
+            <img src="/wp-content/uploads/2023/08/fish-2.png" alt="fish-logo">
+        </div>
+        <div class="row what-have">
+            <div class="col-md-12 col-xs-12">
+                <h2><?php echo $fields['what_have_title']; ?></h2>
+                <div class="what-have-content">
+                    <?php echo $fields['what_have_content']; ?>
+                </div>
+            </div>
         </div>
     </div>
     <div class="about-shape">
@@ -81,7 +92,7 @@ $fields = get_fields();
         <div class="row">    
             <?php
 
-                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 6]); ?>
+                $the_query = new WP_Query(['post_type' => '', 'posts_per_page' => 12]); ?>
 
                 <?php if ( $the_query->have_posts() ) : ?>
 
@@ -93,7 +104,7 @@ $fields = get_fields();
                             <div class="post-wrap">
                                 <?php echo get_the_post_thumbnail( get_the_ID(), 'post-thumbnail' ); ?>
                                 <div class="text-wrap">
-                                    <h4><?php the_title(); ?></h4>
+                                    <h3><?php the_title(); ?></h3>
                                     <p class="autor-date"><?php echo get_the_author(); ?> / <?php the_date('F j,Y') ?></p>
                                     <a href="<?php the_permalink(); ?>">Read More »</a>
                                 </div>

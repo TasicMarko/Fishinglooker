@@ -21,6 +21,7 @@
         }
     }
     .footer-logo-wrap {
+        display: flex;
         @include bp(mobile-all) {
             display: flex;
             justify-content: center;
@@ -39,11 +40,12 @@
             @include bp(mobile-all) {
                 text-align: center;
             }
-            h3 {
+            h2 {
                 color: #fff;
                 font-size: 38px;
                 font-weight: 600;
                 padding-bottom: 20px;
+                line-height: 43px;
                 @include bp(mobile-all) {
                     text-align: center;
                 }
@@ -58,6 +60,19 @@
                 @include bp(mobile-all) {
                     text-align: center;
                     font-size: 20px;
+                }
+            }
+            .footer-content {
+                color: #fff;
+                color: #fff;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 27px;
+                padding-bottom: 30px;
+                font-family: Poppins,sans-serif;
+                @include bp(tablet-all) {
+                    font-size: 18px;
+                    line-height: 24px;
                 }
             }
         }
