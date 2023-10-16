@@ -25,15 +25,15 @@
   },
   "homepage": "https://understrap.com",
   "dependencies": {
-    "postcss": "^8.4.25",
-    "sass": "^1.63.6"
+    "postcss": "^8.4.31",
+    "sass": "^1.68.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.9",
-    "@babel/preset-env": "^7.22.9",
-    "autoprefixer": "^10.4.14",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "autoprefixer": "^10.4.16",
     "browser-sync": "^2.29.3",
-    "del": "^7.0.0",
+    "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",

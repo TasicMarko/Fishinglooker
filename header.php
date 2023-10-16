@@ -98,7 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			<div class="row">
 				<div class="desk-wrap">
 					<div class="logo">
-						<a href="#">
+						<a href="/">
 							<img src="/wp-content/uploads/2022/08/fishinglooker-logo.png" alt="">
 						</a>
 					</div>
